@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+ #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # (c) Shrimadhav U K
 
@@ -39,7 +39,7 @@ from PIL import Image
 
 @pyrogram.Client.on_callback_query()
 async def button(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
+    if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
             chat_id=update.message.chat.id,
             message_ids=update.message.message_id,
