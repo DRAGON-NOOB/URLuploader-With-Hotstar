@@ -141,7 +141,7 @@ async def echo(bot, update):
             disable_web_page_preview=True
        return False
     )
-    if "hotstar" not in url:
+    if "yout"  in url:
         await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.NOYES_URL,
