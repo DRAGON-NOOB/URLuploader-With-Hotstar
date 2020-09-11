@@ -139,6 +139,16 @@ async def echo(bot, update):
             reply_to_message_id=update.message_id,
             parse_mode="html",
             disable_web_page_preview=True
+       return False
+    )
+    if "hotstar" not in url:
+        await bot.send_message(
+            chat_id=update.chat.id,
+            text=Translation.NOYES_URL,
+            reply_to_message_id=update.message_id,
+            parse_mode="html",
+            disable_web_page_preview=True
+        
         )
         return False
     if t_response:
